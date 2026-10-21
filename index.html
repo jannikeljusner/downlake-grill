@@ -15,21 +15,35 @@
   <body>
     <!-- Header start -->
     <header>
-      <div class="logo-container">
-        <img src="images/Logo.svg" alt="Downlake logotyp" />
+      <!-- Logotyp -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/Logo.svg" alt="Downlake Grill & Bar Logotyp" />
+        </a>
       </div>
-      <nav>
+
+      <!-- Hamburgermeny-knapp (syns bara på mobil) -->
+      <button class="hamburger" aria-label="Öppna meny">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Navigationsmeny -->
+      <nav class="nav-menu">
         <ul>
-          <li><a href="#">Meny</a></li>
-          <li><a href="#">Om oss</a></li>
-          <li><a href="#">Fest/Event</a></li>
-          <li><a href="#">Hitta hit</a></li>
-          <li><a href="#">Kontakt</a></li>
+          <li><a href="meny.html">MENY</a></li>
+          <li><a href="om-oss.html">OM OSS</a></li>
+          <li><a href="event.html">FEST / EVENT</a></li>
+          <li><a href="hitta-hit.html">HITTA HIT</a></li>
+          <li><a href="kontakt.html">KONTAKT</a></li>
         </ul>
       </nav>
+
+      <!-- Kontaktinfo för desktop (döljs på mobil via CSS) -->
       <div class="contact-info">
-        <p><strong>Tel:</strong> 026-12 34 56</p>
-        <p><strong>Öppet idag:</strong> 11-20</p>
+        <p><strong>ÖPPET IDAG:</strong> 11-20</p>
+        <p><strong>TEL:</strong> 0691-75 00 11</p>
       </div>
     </header>
     <!-- Header slut -->

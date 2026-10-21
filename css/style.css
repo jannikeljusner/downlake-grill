@@ -86,7 +86,48 @@ nav a:hover {
   color: #d97736; /* Byter texten till orange vid hover */
 }
 
+/* --- GRUNDREGLER FÖR MOBIL (HEADER) --- */
+header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 15px 20px; 
+  background-color: #1a1a1a;
+}
 
+/* Storlek på loggan för mobil */
+.logo img {
+  width: 150px; /* Ändrat från max-width till width då loggan försvann*/
+}
+
+/* Hamburgarknappen */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* De tre strecken i hamburgarknappen */
+.hamburger .bar {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff; /* Vita streck */
+  border-radius: 2px;
+}
+
+/* Göm menylänkarna och kontaktinfon på mobilen */
+.nav-menu {
+  display: none; 
+}
+
+.contact-info {
+  display: none; 
+}
 
 
 /* --- STORA SKÄRMAR (Desktop) --- */
@@ -98,7 +139,9 @@ nav a:hover {
         justify-content: space-between; 
         align-items: center;       
         padding: 25px 40px; 
-        position: relative;       
+        position: sticky;  
+        top: 0;
+        z-index: 100;     
     }
 
     .logo-container {
@@ -126,3 +169,16 @@ nav a:hover {
   line-height: 1.5;
   font-size: 19px; /
 }
+/* Göm hamburgarknappen på desktop */
+  .hamburger {
+    display: none;
+  }
+  
+  /* Visa menyn och kontaktinfon igen på desktop */
+  .nav-menu {
+    display: block; 
+  }
+  
+  .contact-info {
+    display: block;
+  }
