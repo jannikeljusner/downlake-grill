@@ -173,6 +173,48 @@ footer a {
 }
 
 /* =========================================
+   OM OSS-SEKTION (Info-box)
+   ========================================= */
+.info-box {
+  margin-top: 80px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 80px 5% 40px 5%;
+}
+
+.info-box img {
+  width: 100%;
+  height: auto;
+}
+
+/* Större rubrik och brödtext */
+
+.about-text {
+  max-width: 85%;
+}
+
+.about-text h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 24px;
+  line-height: 1.4; /* Ger lite mer luft mellan raderna */
+}
+
+/* Tvingar bilden att fylla höjden */
+.info-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================
    STORA SKÄRMAR (DESKTOP)
    ========================================= */
 @media (min-width: 768px) {
@@ -240,5 +282,14 @@ footer a {
   /* Startsidan: Lägg knapparna på en horisontell rad på desktop */
   .hero-content {
     flex-direction: row;
+  }
+
+  /* Grid för att lägga text och bild exakt sida vid sida (50/50) */
+  .info-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+    margin-bottom: 80px;
   }
 }
