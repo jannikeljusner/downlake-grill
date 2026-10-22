@@ -1,6 +1,11 @@
 /* =========================================
    GRUNDINSTÄLLNINGAR & TYPSNITT
    ========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -107,18 +112,24 @@ nav a:hover {
    ========================================= */
 footer {
   background-color: #1c1c1c;
-  padding: 20px;
+  padding: 40px 5% 20px 5%;
   color: #ffffff;
   text-align: center;
 }
 
-footer h3 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-  margin-top: 25px;
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-/* Gäller p-taggar OCH a-taggar, men BARA i footern */
+footer h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
 footer p,
 footer a {
   font-size: 1.5rem;
@@ -126,6 +137,52 @@ footer a {
   line-height: 1.5;
   color: #ffffff;
   text-decoration: none;
+}
+
+footer a:hover {
+  color: #d97736; /* Blir orange när man hovrar över numret */
+}
+
+/* Knapp för Google Maps */
+footer a.map-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #d97736;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.map-btn:hover {
+  background-color: #bf6529; /* Lite mörkare orange när man hovrar */
+}
+
+/* Sociala medier platshållare */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  font-size: 28px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #d97736;
+}
+
+/* Styling för copyright-raden */
+.copyright {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333333;
+  font-size: 1rem;
+  color: #999999;
 }
 
 /* =========================================
@@ -203,8 +260,9 @@ footer a {
 }
 
 .about-text p {
-  font-size: 24px;
-  line-height: 1.4; /* Ger lite mer luft mellan raderna */
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 20px; /* Skapar luft mellan styckena */
 }
 
 /* Tvingar bilden att fylla höjden */
@@ -269,14 +327,18 @@ footer a {
     z-index: 10;
   }
 
-  /* Footer (Visa som två spalter) */
+  /* Footer: Fyra spalter på Desktop */
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1400px;
     margin: 0 auto;
-    text-align: left; /* Ändra till vänsterställd text på desktop om du vill */
+    text-align: left; /* Flyttar texten till vänster på stora skärmar */
+  }
+
+  .social-icons {
+    justify-content: flex-start;
   }
 
   /* Startsidan: Lägg knapparna på en horisontell rad på desktop */
