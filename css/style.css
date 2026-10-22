@@ -129,6 +129,50 @@ footer a {
 }
 
 /* =========================================
+   HERO-SEKTION & KNAPPAR (Startsidan)
+   ========================================= */
+.hero {
+  width: 100%;
+  margin: 0 0 15px 0;
+  background-image: url("../images/Burger.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px 5%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: -65px;
+}
+
+/* --- Knapp-styling --- */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  background-color: #d97736;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+/* =========================================
    STORA SKÄRMAR (DESKTOP)
    ========================================= */
 @media (min-width: 768px) {
@@ -191,5 +235,10 @@ footer a {
     max-width: 900px;
     margin: 0 auto;
     text-align: left; /* Ändra till vänsterställd text på desktop om du vill */
+  }
+
+  /* Startsidan: Lägg knapparna på en horisontell rad på desktop */
+  .hero-content {
+    flex-direction: row;
   }
 }
