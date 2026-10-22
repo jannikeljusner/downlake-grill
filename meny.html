@@ -3,10 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meny</title>
+    <title>Downlake Grill & Bar</title>
+    <!-- Teckensnitt från Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Länk till CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- HEADER START -->
     <header>
       <!-- Logotyp -->
       <div class="logo">
@@ -15,35 +24,45 @@
         </a>
       </div>
 
-      <!-- Hamburgermeny-knapp (syns bara på mobil) -->
+      <!-- Menyknapp för mobil -->
       <button class="hamburger" aria-label="Öppna meny">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
 
-      <!-- Navigationsmeny -->
+      <!-- Navigeringsmeny -->
       <nav class="nav-menu">
         <ul>
           <li><a href="meny.html">MENY</a></li>
-          <li><a href="om-oss.html">OM OSS</a></li>
+          <li><a href="index.html#om-oss">OM OSS</a></li>
           <li><a href="event.html">FEST / EVENT</a></li>
-          <li><a href="hitta-hit.html">HITTA HIT</a></li>
-          <li><a href="kontakt.html">KONTAKT</a></li>
+          <li><a href="index.html#hitta-hit">HITTA HIT</a></li>
+          <li><a href="index.html#kontakt">KONTAKT</a></li>
         </ul>
       </nav>
 
-      <!-- Kontaktinfo för desktop (döljs på mobil via CSS) -->
+      <!-- Kontaktinfo längst upp -->
       <div class="contact-info">
-        <p><strong>ÖPPET IDAG:</strong> 11-20</p>
-        <p><strong>TEL:</strong><a href="tel:0691750011">0691 75 00 11</a></p>
+        <p>
+          <strong>ÖPPET IDAG:</strong> <span id="todays-hours">Laddar...</span>
+        </p>
+        <p><strong>TEL:</strong> <a href="tel:0691750011">0691 75 00 11</a></p>
       </div>
     </header>
-    <!-- Header slut -->
+    <!-- HEADER SLUT -->
 
+    <!-- HUVUDINNEHÅLL START -->
+    <main>
+      <h1>Välkommen till Downlake Grill & Bar</h1>
+      <!-- Här lägger vi in startsidans övriga bilder och text senare -->
+    </main>
+    <!-- HUVUDINNEHÅLL SLUT -->
+
+    <!-- FOOTER START -->
     <footer>
       <div class="footer-content">
-        <!-- Vänstra spalten: Adress och Karta -->
+        <!-- Vänster sida: Adress och Karta -->
         <div class="footer-col-left">
           <h3>HITTA HIT</h3>
           <p>
@@ -51,19 +70,17 @@
             Kvarnsvedsvägen 24, 864 96 Stöde
           </p>
 
-          <!-- Klickbar karta -->
+          <!-- Inbäddad karta -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14198.802146950346!2d16.5684693!3d62.4089333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46645318db431411%3A0xc3911244e8031575!2sKvarnsvedsv%C3%A4gen%2024%2C%20864%2096%20St%C3%B6de!5e0!3m2!1ssv!2sse!4v1700000000000!5m2!1ssv!2sse"
-            width="100%"
-            height="250"
-            style="border: 0; border-radius: 8px"
+            style="border: 0; border-radius: 8px; width: 100%; height: 250px"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
 
-        <!-- Högra spalten: Öppettider och Telefon -->
+        <!-- Höger sida: Öppettider och Telefon -->
         <div class="footer-col-right">
           <h3>ÖPPETTIDER</h3>
           <p>Mån–Fre 11–20 • Lör–Sön 12–20</p>
@@ -73,5 +90,6 @@
         </div>
       </div>
     </footer>
+    <!-- FOOTER SLUT -->
   </body>
 </html>
