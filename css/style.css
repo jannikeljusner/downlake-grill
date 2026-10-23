@@ -28,7 +28,7 @@ h4 {
 }
 
 /* =========================================
-   HEADER (MOBIL FÖRST)
+   HEADER 
    ========================================= */
 header {
   display: flex;
@@ -108,7 +108,7 @@ nav a:hover {
 }
 
 /* =========================================
-   FOOTER (MOBIL FÖRST)
+   FOOTER 
    ========================================= */
 footer {
   background-color: #1c1c1c;
@@ -418,6 +418,86 @@ footer a.map-btn {
   margin-top: 60px;
   margin-bottom: 25px;
 }
+
+/* =========================================
+   EVENT-SIDAN / FORMULÄR 
+========================================= */
+
+/* Hero-bilden högst upp */
+.event-hero img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Huvudbehållaren för innehållet */
+.event-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Anpassa pizzabilden */
+.info-image {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  display: none;
+}
+
+.event-info {
+  margin-bottom: 50px;
+}
+
+/* Texten & Rubriken til vänster */
+.event-info h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.event-info p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Ökade till 20px så det blir lite mer luft mellan fälten */
+}
+
+.form-group label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+#message {
+  min-height: 120px;
+  resize: none; /* Detta gör att besökaren inte kan dra ut rutan alls, precis som du ville! */
+}
+
+.submit-btn {
+  background-color: #d97736;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px; /* Bytte till shorthand: 15px uppe/nere, 30px höger/vänster för en snyggare rektangel */
+  border-radius: 15px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 /* =========================================
    STORA SKÄRMAR (DESKTOP)
    ========================================= */
@@ -519,4 +599,19 @@ footer a.map-btn {
   .scroll-arrow {
     display: none;
   }
+
+/* Event-delen */
+
+.info-image {
+  display: block;
+}
+
+.event-container {
+  display: flex;
+  gap: 100px;
+}
+
+.event-info,
+.event-form-wrapper {
+  flex: 1;
 }
