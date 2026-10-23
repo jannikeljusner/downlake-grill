@@ -279,29 +279,60 @@ footer a.map-btn {
 /* --- Huvudrubrik (Vår meny) --- */
 .page-title {
   max-width: 800px;
-  margin: 40px auto 20px auto;
+  margin: 40px auto 0 auto; /* 'auto' centrerar boxen snyggt på mobilen */
   text-align: left;
   font-size: 40px;
+  padding: 0 20px;
 }
 
-/* --- 1. Kategoriknapparna högst upp --- */
+/* --- 1. Kategoriknapparna --- */
+
 .menu-nav {
-  margin-top: 80px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
+  overflow-x: auto;
+  padding: 0 20px;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.menu-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .menu-nav button {
+  font-family: "Bebas Neue", sans-serif;
   background-color: #1a1a1a;
   color: #ffffff;
-  border-radius: 15px;
-  padding: 7px 15px;
+  border-radius: 25px;
+  padding: 15px 35px;
+  font-size: 32px;
+  letter-spacing: 1px;
+  text-decoration: none;
   border: none;
+  cursor: pointer;
 }
 
 .menu-nav button.active {
   background-color: #d97736;
+}
+
+/* Container för menyn och pilarna */
+.menu-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Utseende på pilarna */
+.scroll-arrow {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 10px;
+  cursor: pointer;
 }
 
 /* --- Avdelare under knapparna --- */
@@ -316,39 +347,52 @@ footer a.map-btn {
 /* --- 2. Maträtterna --- */
 .menu-category {
   text-align: center;
+  font-size: 65px;
+}
+
+.category-info {
+  font-size: 20px;
+  font-style: italic;
 }
 
 .orange-line {
-  width: 60px;
-  height: 3px;
+  width: 120px;
+  height: 2px;
   background-color: #d97736;
   margin: 15px auto;
+}
 
-  .item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .ingredients {
-    font-size: 18px;
-    font-style: italic;
-    max-width: 50%;
-  }
+.ingredients {
+  font-size: 18px;
+  font-style: italic;
+  max-width: 50%;
+}
 
-  .menu-list {
-    max-width: 800px;
-    margin: 40px auto;
-    text-align: left;
-  }
+.menu-list {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: left;
+  padding: 0 20px;
+}
 
-  /* --- 3. Finjustering av rätterna --- */
+/* --- 3. Finjustering av rätterna --- */
 
-  .menu-item {
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-  }
+.menu-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .item-header h3 {
@@ -358,11 +402,18 @@ footer a.map-btn {
 
 .price {
   font-size: 30px;
-  font-weight: 400px;
+  font-weight: 600;
+}
+
+.ingredients {
+  font-size: 18px;
+  font-style: italic;
+  max-width: 100%; /* Tar hela bredden på mobilen */
 }
 
 /* --- 4. Allergi-informationen i botten --- */
 .allergy-info {
+  font-size: 16px;
   text-align: center;
   margin-top: 60px;
   margin-bottom: 25px;
@@ -448,5 +499,24 @@ footer a.map-btn {
     gap: 30px;
     align-items: stretch;
     margin-bottom: 80px;
+  }
+
+  /* Meny-delen */
+  .page-title {
+    margin-left: 400px;
+  }
+
+  .menu-nav {
+    justify-content: center;
+    overflow-x: visible;
+    padding: 0;
+  }
+
+  .ingredients {
+    max-width: 50%;
+  }
+
+  .scroll-arrow {
+    display: none;
   }
 }
