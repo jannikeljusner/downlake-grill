@@ -4,6 +4,9 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
 }
 
 * {
@@ -16,6 +19,11 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
   color: #1c1c1c;
+}
+
+main {
+  min-height: 100vh !important;
+  display: block !important;
 }
 
 /* Typsnitt för alla rubriker */
@@ -34,6 +42,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 15px 20px;
   background-color: #1a1a1a;
   width: 100%;
@@ -87,15 +96,14 @@ header {
 }
 
 .contact-info {
-  display: block;
-  position: absolute;
-  left: 50%;
-  translateX(-50%);
+  width: 100%; /* Tvingar rutan att ta hela bredden */
+  order: 3; /* Tvingar rutan att lägga sig under loggan (1) och menyn (2) */
   text-align: center;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #333333; /* Lägger till en diskret linje som snyggar till det */
   font-size: 14px;
   color: #f5f5f5;
-  margin-top: 10px;
-  width: max-content;
 }
 .contact-info a {
   color: #ffffff; 
@@ -611,10 +619,20 @@ footer a.map-btn {
 @media (min-width: 768px) {
   /* Header */
   header {
+    flex-wrap: nowrap;
     padding: 25px 40px;
     position: sticky;
     top: 0;
     z-index: 100;
+  }
+
+  .contact-info {
+    width: auto;
+    order: unset;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    /* ...behåll de befintliga reglerna du redan har här för desktop... */
   }
 
   .logo img {

@@ -3,35 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Downlake Grill & Bar</title>
-    <!-- Teckensnitt från Google -->
+    <title>Downlake Grill & Bar - Meny</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- HEADER START -->
     <header>
-      <!-- Logotyp -->
       <div class="logo">
         <a href="index.html">
           <img src="images/Logo.svg" alt="Downlake Grill & Bar Logotyp" />
         </a>
       </div>
-
-      <!-- Menyknapp för mobil -->
       <button class="hamburger" aria-label="Öppna meny">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-
-      <!-- Navigeringsmeny -->
       <nav class="nav-menu">
         <ul>
           <li><a href="index.html">START</a></li>
@@ -42,8 +39,6 @@
           <li><a href="index.html#hitta-hit">KONTAKT</a></li>
         </ul>
       </nav>
-
-      <!-- Kontaktinfo längst upp -->
       <div class="contact-info">
         <p>
           <strong>ÖPPET IDAG:</strong> <span id="todays-hours">Laddar...</span>
@@ -55,83 +50,55 @@
 
     <!-- HUVUDINNEHÅLL START -->
     <main>
+      <div class="menu-header-wrapper">
+        <h1 class="page-title">VÅR MENY</h1>
+        <div class="menu-nav-container">
+          <span class="scroll-arrow">&lt;</span>
+          <nav class="menu-nav">
+            <button class="active">BURGARE</button>
+            <button>PIZZA</button>
+            <button>TALLRIKAR & RULLAR</button>
+            <button>SIDES & DIPP</button>
+            <button>DRYCK & GLASS</button>
+          </nav>
+          <span class="scroll-arrow">&gt;</span>
+        </div>
+      </div>
 
-      <!-- Rubrik och menyknappar -->
-<!-- Rubrik och menyknappar i en gemensam låda -->
-<div class="menu-header-wrapper">
-  <h1 class="page-title">VÅR MENY</h1>
+      <div class="menu-divider"></div>
 
-  <div class="menu-nav-container">
-    <span class="scroll-arrow">&lt;</span>
-    
-    <nav class="menu-nav">
-      <button class="active">BURGARE</button>
-      <button>PIZZA</button>
-      <button>TALLRIKAR & RULLAR</button>
-      <button>SIDES & DIPP</button>
-      <button>DRYCK & GLASS</button>
-    </nav>
+      <!-- Meny-innehåll renderas här av JavaScript -->
+      <div id="menu-container"></div>
 
-    <span class="scroll-arrow">&gt;</span>
-  </div>
-</div>
-
-<!-- Lång grå linje under knapparna -->
-<div class="menu-divider"></div>
-
-<!-- Meny-innehåll -->
-<div id="menu-container">
- </div>
-  </section>
-
-</div>
-
-<!-- Viktig information (Allergier etc) -->
-<div class="info-box-orange"><p>ALLERGIER? FRÅGA OSS GÄRNA OM INNEHÅLLET I MATEN.</p><p>VI HAR FULLSTÄNDIGA RÄTTIGHETER (ÖL & VIN).</p></div>
-
-
-
-
-
-
-
-
-
-
-
-
+      <!-- Viktig information (Allergier etc) -->
+      <div class="info-box-orange">
+        <p>ALLERGIER? FRÅGA OSS GÄRNA OM INNEHÅLLET I MATEN.</p>
+        <p>VI HAR FULLSTÄNDIGA RÄTTIGHETER (ÖL & VIN).</p>
+      </div>
     </main>
     <!-- HUVUDINNEHÅLL SLUT -->
 
-     <!-- FOOTER START -->
-    <footer>
-      <footer id="hitta-hit">
+    <!-- FOOTER START -->
+    <footer id="hitta-hit">
       <div class="footer-content">
-
-        <!-- Kolumn 1: Hitta hit & Kart-knapp -->
         <div class="footer-col">
           <h3>HITTA HIT</h3>
-          <p>
-            Downlake Grill & Bar<br />
-            Kvarnsvedsvägen 24,<br />
-            864 96 Stöde
-          </p>
-          <a href="https://www.google.com/maps/place/Kvarnsvedsv%C3%A4gen+24,+864+96+St%C3%B6de" target="_blank" class="map-btn">Öppna i Google Maps</a>
+          <p>Downlake Grill & Bar<br />Kvarnsvedsvägen 24,<br />864 96 Stöde</p>
+          <a
+            href="https://www.google.com/maps/place/Kvarnsvedsv%C3%A4gen+24,+864+96+St%C3%B6de"
+            target="_blank"
+            class="map-btn"
+            >Öppna i Google Maps</a
+          >
         </div>
-
-        <!-- Kolumn 2: Öppettider -->
         <div class="footer-col">
           <h3>ÖPPETTIDER</h3>
           <p>Mån–Fre: 11–20<br />Lör–Sön: 12–20</p>
         </div>
-
-        <!-- Kolumn 3: Telefonnummer -->
         <div class="footer-col">
           <h3>TELEFONNUMMER</h3>
           <a href="tel:0691750011">0691 75 00 11</a>
         </div>
-
-        <!-- Kolumn 4: Följ oss -->
         <div class="footer-col">
           <h3>FÖLJ OSS!</h3>
           <div class="social-icons">
@@ -139,21 +106,20 @@
               href="https://www.facebook.com/people/Nedansj%C3%B6-Grillen/61580404156965/"
               target="_blank"
               aria-label="Facebook"
-            >
-              <i class="fa-brands fa-facebook"></i>
-            </a>
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
             <a
               href="https://www.instagram.com/nedansjo.grillen"
               target="_blank"
               aria-label="Instagram"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
           </div>
         </div>
       </div>
     </footer>
     <!-- FOOTER SLUT -->
-     <script src="js/main.js"></script>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

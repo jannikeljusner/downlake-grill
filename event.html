@@ -12,7 +12,10 @@
       rel="stylesheet"
     />
     <!-- Länk till CSS -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -33,7 +36,7 @@
       </button>
 
       <!-- Navigeringsmeny -->
-     <nav class="nav-menu">
+      <nav class="nav-menu">
         <ul>
           <li><a href="index.html">START</a></li>
           <li><a href="meny.html">MENY</a></li>
@@ -55,79 +58,86 @@
 
     <!-- HUVUDINNEHÅLL START -->
     <main>
-
       <!-- Hero-bild högst upp -->
-<div class="event-hero">
-  <img src="images/Shared Burgers.jpg" alt="Hamburgare" /> 
-</div>
+      <div class="event-hero">
+        <img src="images/Shared Burgers.jpg" alt="Hamburgare" />
+      </div>
 
-<!-- Huvudbehållare för text och formulär -->
-<section class="event-container">
-  
-  <!-- Vänster kolumn: Info och pizzabild -->
-  <div class="event-info">
-    <h2>MAT TILL FESTEN? DET FIXAR VI!</h2>
-    <p>Planerar du fest, företagsevent eller ett större kompishäng?</p>
-    <p>Låt oss på Downlake Grill & Bar stå för maten!</p>
-    <p>Vi tar emot större beställningar, perfekt för er att hämta upp och bjuda på hemma eller på kontoret.</p>
-    <p>Fyll i formuläret nedan med hur många ni blir och vad ni är sugna på, så återkommer vi med ett upplägg.</p>
-    <p><em>(Observera att vi endast erbjuder upphämtning).</em></p>
-  </div>
+      <!-- Huvudbehållare för text och formulär -->
+      <section class="event-container">
+        <!-- Vänster kolumn: Info och pizzabild -->
+        <div class="event-info">
+          <h2>MAT TILL FESTEN? DET FIXAR VI!</h2>
+          <p>Planerar du fest, företagsevent eller ett större kompishäng?</p>
+          <p>Låt oss på Downlake Grill & Bar stå för maten!</p>
+          <p>
+            Vi tar emot större beställningar, perfekt för er att hämta upp och
+            bjuda på hemma eller på kontoret.
+          </p>
+          <p>
+            Fyll i formuläret nedan med hur många ni blir och vad ni är sugna
+            på, så återkommer vi med ett upplägg.
+          </p>
+          <p><em>(Observera att vi endast erbjuder upphämtning).</em></p>
+        </div>
 
-  <!-- Höger kolumn: Formuläret -->
-  <div class="event-form-wrapper">
+        <!-- Höger kolumn: Formuläret -->
+        <div class="event-form-wrapper">
+          <!--Formulär-->
 
-      <!--Formulär-->
+          <form id="event-form">
+            <div class="form-group">
+              <label for="name">NAMN</label>
+              <input type="text" id="name" name="name" />
+              <span id="name-error" class="error-text"></span>
+            </div>
 
-  <form id="event-form">
-  <div class="form-group">
-    <label for="name">NAMN</label>
-    <input type="text" id="name" name="name">
-    <span id="name-error" class="error-text"></span>
-  </div>
+            <div class="form-group">
+              <label for="tel">TELEFONNUMMER</label>
+              <input type="tel" id="tel" name="tel" />
+              <span id="tel-error" class="error-text"></span>
+            </div>
 
-  <div class="form-group">
-    <label for="tel">TELEFONNUMMER</label>
-    <input type="tel" id="tel" name="tel">
-    <span id="tel-error" class="error-text"></span>
-  </div>
+            <div class="form-group">
+              <label for="email">E-POST</label>
+              <input type="email" id="email" name="email" />
+              <span id="email-error" class="error-text"></span>
+              <!-- Fixad! -->
+            </div>
 
-  <div class="form-group">
-    <label for="email">E-POST</label>
-    <input type="email" id="email" name="email">
-    <span id="email-error" class="error-text"></span> <!-- Fixad! -->
-  </div>
+            <div class="form-group">
+              <label for="date">DATUM & TID FÖR EVENTET</label>
+              <input type="text" id="date" name="date" />
+              <span id="date-error" class="error-text"></span>
+            </div>
 
-  <div class="form-group">
-    <label for="date">DATUM & TID FÖR EVENTET</label>
-    <input type="text" id="date" name="date">
-    <span id="date-error" class="error-text"></span>
-  </div>
+            <div class="form-group">
+              <label for="people">ANTAL PERSONER</label>
+              <input type="number" id="people" name="people" />
+              <span id="people-error" class="error-text"></span>
+              <!-- Fixad! -->
+            </div>
 
-  <div class="form-group">
-    <label for="people">ANTAL PERSONER</label>
-    <input type="number" id="people" name="people">
-    <span id="people-error" class="error-text"></span> <!-- Fixad! -->
-  </div>
+            <div class="form-group">
+              <label for="message">DIN FÖRFRÅGAN / MEDDELANDE</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Berätta vad ni är sugna på, ungefär hur mycket mat ni behöver och om det finns några allergier."
+              ></textarea>
+              <span id="message-error" class="error-text"></span>
+            </div>
 
-  <div class="form-group">
-    <label for="message">DIN FÖRFRÅGAN / MEDDELANDE</label>
-    <textarea id="message" name="message" placeholder="Berätta vad ni är sugna på, ungefär hur mycket mat ni behöver och om det finns några allergier."></textarea>
-    <span id="message-error" class="error-text"></span>
-  </div>
-
-  <button type="submit" class="submit-btn">SKICKA FÖRFRÅGAN</button>
-</form>
-</div>
-</section>
+            <button type="submit" class="submit-btn">SKICKA FÖRFRÅGAN</button>
+          </form>
+        </div>
+      </section>
     </main>
     <!-- HUVUDINNEHÅLL SLUT -->
 
-      <!-- FOOTER START -->
-    <footer>
-      <footer id="hitta-hit">
+    <!-- FOOTER START -->
+    <footer id="hitta-hit">
       <div class="footer-content">
-
         <!-- Kolumn 1: Hitta hit & Kart-knapp -->
         <div class="footer-col">
           <h3>HITTA HIT</h3>
@@ -136,7 +146,12 @@
             Kvarnsvedsvägen 24,<br />
             864 96 Stöde
           </p>
-          <a href="https://www.google.com/maps/place/Kvarnsvedsv%C3%A4gen+24,+864+96+St%C3%B6de" target="_blank" class="map-btn">Öppna i Google Maps</a>
+          <a
+            href="https://www.google.com/maps/place/Kvarnsvedsv%C3%A4gen+24,+864+96+St%C3%B6de"
+            target="_blank"
+            class="map-btn"
+            >Öppna i Google Maps</a
+          >
         </div>
 
         <!-- Kolumn 2: Öppettider -->
@@ -174,6 +189,6 @@
       </div>
     </footer>
     <!-- FOOTER SLUT -->
-     <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
