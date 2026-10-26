@@ -1,9 +1,10 @@
 "use strict";
 
-// --- 1. HAMBURGERMENY (Måste finnas på alla sidor) ---
+// --- 1. HAMBURGERMENY FÖR MOBILVY ---
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
+// Fäll ut eller dölj menyn vid klick
 if (hamburger) {
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
@@ -11,13 +12,14 @@ if (hamburger) {
   });
 }
 
-// --- 2. ÖPPETTIDER UTIFRÅN DAG ---
+// --- 2. ÖPPETTIDER BASERAT PÅ VECKODAG ---
 let now = new Date();
 let dayToday = now.getDay();
 let timeDisplay = document.getElementById("todays-hours");
 
-// Kollar att vi faktiskt hittar texten på sidan innan vi ändrar den
+// Kolla så att texten för öppettider finns på sidan innan den ändras
 if (timeDisplay !== null) {
+  // Sätt helgtider om det är söndag (0) eller lördag (6)
   if (dayToday === 0 || dayToday === 6) {
     timeDisplay.textContent = "12-20";
   } else {
@@ -25,7 +27,7 @@ if (timeDisplay !== null) {
   }
 }
 
-// --- 3. FORMULÄRVALIDERING (Inline-fel) ---
+// --- 3. FORMULÄR FÖR EVENTFÖRFRÅGAN ---
 const form = document.querySelector("#event-form");
 
 if (form !== null) {
@@ -47,6 +49,7 @@ if (form !== null) {
     event.preventDefault();
     let isValid = true;
 
+    // Töm eventuella gamla felmeddelanden
     nameError.textContent = "";
     emailError.textContent = "";
     phoneError.textContent = "";
@@ -54,6 +57,7 @@ if (form !== null) {
     peopleError.textContent = "";
     messageError.textContent = "";
 
+    // Kolla om något fält saknar text
     if (nameInput.value.trim() === "") {
       nameError.textContent = "Du måste ange ett namn.";
       isValid = false;
@@ -79,6 +83,7 @@ if (form !== null) {
       isValid = false;
     }
 
+    // Visa bekräftelse och töm formuläret om allt är korrekt ifyllt
     if (isValid === true) {
       alert("Tack för din förfrågan! Vi hörs snart.");
       form.reset();
@@ -86,12 +91,12 @@ if (form !== null) {
   });
 }
 
-// --- 4. HÄMTA MENYN MED FETCH ---
+// --- 4. HÄMTA MENY FRÅN JSON-FIL ---
 const menuContainer = document.querySelector("#menu-container");
 
-// Hela denna funktion måste ligga INUTI if-satsen
 if (menuContainer !== null) {
   menuContainer.innerHTML = "";
+
   const categories = [
     "BURGARE",
     "PIZZA",
@@ -106,10 +111,12 @@ if (menuContainer !== null) {
     })
     .then(function (menuData) {
       categories.forEach(function (categoryName) {
+        // Plocka ut de maträtter som tillhör aktuell kategori
         let categoryItems = menuData.filter(function (item) {
           return item.kategori === categoryName;
         });
 
+        // Om kategorin har maträtter, bygg ihop dem
         if (categoryItems.length > 0) {
           let section = document.createElement("section");
           section.className = "menu-category";
@@ -118,6 +125,7 @@ if (menuContainer !== null) {
             .replace(/ & /g, "-")
             .replace(/ /g, "-");
 
+          // Lägg till extra info för vissa matkategorier
           let categorySubtext = "";
           if (categoryName === "BURGARE") {
             categorySubtext =
@@ -133,6 +141,7 @@ if (menuContainer !== null) {
             subtextHTML = `<p class="category-info"><em>${categorySubtext}</em></p>`;
           }
 
+          // Lägg in rubrik och linje i kategorin
           section.innerHTML = `
             <h2>${categoryName}</h2>
             <div class="orange-line"></div>
@@ -142,6 +151,7 @@ if (menuContainer !== null) {
 
           let menuList = section.querySelector(".menu-list");
 
+          // Lägg till namn, pris och beskrivning för varje maträtt
           categoryItems.forEach(function (item) {
             let article = document.createElement("article");
             article.className = "menu-item";
@@ -157,6 +167,7 @@ if (menuContainer !== null) {
             menuList.appendChild(article);
           });
 
+          // Placera hela den färdiga kategorin på skärmen
           menuContainer.appendChild(section);
         }
       });
@@ -166,9 +177,9 @@ if (menuContainer !== null) {
       menuContainer.innerHTML =
         "<p>Kunde inte ladda menyn just nu. Försök ladda om sidan.</p>";
     });
-} // <--- HÄR STÄNGS IF-SATSEN (det var denna som låg fel innan!)
+}
 
-// --- 5. MENYNAVIGERING (Scrolla till rätt kategori) ---
+// --- 5. MENYNAVIGERING MED KNAPPAR ---
 const categoryButtons = document.querySelectorAll(".menu-nav button");
 
 categoryButtons.forEach(function (button) {
@@ -181,9 +192,11 @@ categoryButtons.forEach(function (button) {
 
     let targetSection = document.getElementById(sectionId);
 
+    // Scrolla ner till rätt kategori
     if (targetSection !== null) {
       targetSection.scrollIntoView({ behavior: "smooth" });
 
+      // Markera den klickade knappen som aktiv (orange)
       categoryButtons.forEach(function (btn) {
         btn.classList.remove("active");
       });
@@ -192,27 +205,25 @@ categoryButtons.forEach(function (button) {
   });
 });
 
-// --- 6. SCROLLPILAR FÖR MENYN ---
+// --- 6. SCROLLPILAR FÖR KATEGORIKNAPPAR ---
 const menuNavElement = document.querySelector(".menu-nav");
 const scrollArrows = document.querySelectorAll(".scroll-arrow");
 
-// Kollar att vi är på rätt sida och att pilarna finns
+// Kolla så att pilarna finns innan klick-funktionerna läggs till
 if (menuNavElement !== null && scrollArrows.length === 2) {
-  const leftArrow = scrollArrows[0]; // Den första pilen (<)
-  const rightArrow = scrollArrows[1]; // Den andra pilen (>)
+  const leftArrow = scrollArrows[0];
+  const rightArrow = scrollArrows[1];
 
-  // Klick på vänster pil
   leftArrow.addEventListener("click", function () {
     menuNavElement.scrollBy({
-      left: -200, // Skrollar 200 pixlar åt vänster
+      left: -200,
       behavior: "smooth",
     });
   });
 
-  // Klick på höger pil
   rightArrow.addEventListener("click", function () {
     menuNavElement.scrollBy({
-      left: 200, // Skrollar 200 pixlar åt höger
+      left: 200,
       behavior: "smooth",
     });
   });
