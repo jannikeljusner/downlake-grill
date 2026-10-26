@@ -320,6 +320,11 @@ footer a.map-btn {
   background-color: #d97736;
 }
 
+.menu-nav button:hover {
+  background-color: #d97736;
+  transition: 0.5s;
+}
+
 /* Container för menyn och pilarna */
 .menu-nav-container {
   display: flex;
