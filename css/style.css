@@ -26,7 +26,7 @@ main {
   display: block !important;
 }
 
-/* Typsnitt för alla rubriker */
+/* Teckensnitt för rubriker */
 h1,
 h2,
 h3,
@@ -36,7 +36,7 @@ h4 {
 }
 
 /* =========================================
-   HEADER 
+   SIDHUVUD (HEADER)
    ========================================= */
 header {
   display: flex;
@@ -59,7 +59,7 @@ header {
   width: 150px;
 }
 
-/* Hamburgarknapp */
+/* Menyknapp (Mobilvy) */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -78,7 +78,7 @@ header {
   border-radius: 2px;
 }
 
-/* Göm menylänkarna */
+/* Döljer navigeringsmeny som standard (Mobilvy) */
 .nav-menu {
   display: none;
 }
@@ -95,28 +95,29 @@ header {
   z-index: 1000;
 }
 
+/* Kontaktinformation (Mobilvy) */
 .contact-info {
-  width: 100%; /* Tvingar rutan att ta hela bredden */
-  order: 3; /* Tvingar rutan att lägga sig under loggan (1) och menyn (2) */
+  width: 100%;
+  order: 3;
   text-align: center;
   margin-top: 15px;
   padding-top: 15px;
-  border-top: 1px solid #333333; /* Lägger till en diskret linje som snyggar till det */
+  border-top: 1px solid #333333;
   font-size: 14px;
   color: #f5f5f5;
 }
+
 .contact-info a {
-  color: #ffffff; 
-  text-decoration: none; /* Tar bort understrykningen */
+  color: #ffffff;
+  text-decoration: none;
 }
 
-
 #om-oss p {
-  font-size: 17px; /* Sänk denna siffra tills den känns normal igen */
+  font-size: 17px;
 }
 
 /* =========================================
-   MENYLÄNKAR (Utseende)
+   MENYLÄNKAR (NAVIGERING)
    ========================================= */
 nav ul {
   list-style: none;
@@ -146,7 +147,7 @@ nav a:hover {
 }
 
 /* =========================================
-   FOOTER 
+   SIDFOT (FOOTER)
    ========================================= */
 footer {
   background-color: #1c1c1c;
@@ -177,11 +178,12 @@ footer a {
   text-decoration: none;
 }
 
+/* Hover-effekt för länkar */
 footer a:hover {
-  color: #d97736; /* Blir orange när man hovrar över numret */
+  color: #d97736;
 }
 
-/* Knapp för Google Maps */
+/* Knapp: Google Maps */
 footer a.map-btn {
   display: inline-block;
   margin-top: 10px;
@@ -193,10 +195,10 @@ footer a.map-btn {
 }
 
 .map-btn:hover {
-  background-color: #bf6529; /* Lite mörkare orange när man hovrar */
+  background-color: #bf6529;
 }
 
-/* Sociala medier platshållare */
+/* Sociala medier */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -214,7 +216,7 @@ footer a.map-btn {
   color: #d97736;
 }
 
-/* Styling för copyright-raden */
+/* Copyright-sektion */
 .copyright {
   margin-top: 40px;
   padding-top: 20px;
@@ -224,7 +226,7 @@ footer a.map-btn {
 }
 
 /* =========================================
-   HERO-SEKTION & KNAPPAR (Startsidan)
+   SEKTION: HERO & KNAPPAR (Startsida)
    ========================================= */
 .hero {
   width: 100%;
@@ -247,7 +249,7 @@ footer a.map-btn {
   margin-bottom: -65px;
 }
 
-/* --- Knapp-styling --- */
+/* Knappkomponent */
 .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -268,7 +270,7 @@ footer a.map-btn {
 }
 
 /* =========================================
-   OM OSS-SEKTION (Info-box)
+   SEKTION: OM OSS (Info-box)
    ========================================= */
 .info-box {
   margin-top: 80px;
@@ -283,8 +285,6 @@ footer a.map-btn {
   width: 100%;
   height: auto;
 }
-
-/* Större rubrik och brödtext */
 
 .about-text {
   max-width: 100%;
@@ -301,10 +301,10 @@ footer a.map-btn {
 .about-text p {
   font-size: 22px;
   line-height: 1.4;
-  margin-bottom: 20px; /* Skapar luft mellan styckena */
+  margin-bottom: 20px;
 }
 
-/* Tvingar bilden att fylla höjden */
+/* Responsiv bildanpassning */
 .info-box img {
   width: 100%;
   height: 100%;
@@ -312,20 +312,19 @@ footer a.map-btn {
 }
 
 /* =========================================
-   MENY-SIDAN
-========================================= */
+   MENYSIDA
+   ========================================= */
 
-/* --- Huvudrubrik (Vår meny) --- */
+/* Huvudrubrik */
 .page-title {
   max-width: 800px;
-  margin: 40px auto 0 auto; /* 'auto' centrerar boxen snyggt på mobilen */
+  margin: 40px auto 0 auto;
   text-align: left;
   font-size: 40px;
   padding: 0 20px;
 }
 
-/* --- 1. Kategoriknapparna --- */
-
+/* 1. Kategorinavigering */
 .menu-nav {
   margin-top: 30px;
   margin-bottom: 50px;
@@ -364,14 +363,13 @@ footer a.map-btn {
   transition: 0.5s;
 }
 
-/* Container för menyn och pilarna */
+/* Behållare för navigeringspilar */
 .menu-nav-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Utseende på pilarna */
 .scroll-arrow {
   font-size: 32px;
   font-weight: bold;
@@ -380,16 +378,16 @@ footer a.map-btn {
   color: #d97736;
 }
 
-/* --- Avdelare under knapparna --- */
+/* Visuell avdelare */
 .menu-divider {
   width: 100%;
   height: 1px;
-  background-color: #e0e0e0; /* Ljusgrå färg */
+  background-color: #e0e0e0;
   margin-top: 20px;
   margin-bottom: 40px;
 }
 
-/* --- 2. Maträtterna --- */
+/* 2. Kategorisektioner */
 .menu-category {
   text-align: center;
   font-size: 45px;
@@ -409,18 +407,7 @@ footer a.map-btn {
   margin: 15px auto;
 }
 
-.item-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.ingredients {
-  font-size: 18px;
-  font-style: italic;
-  max-width: 50%;
-}
-
+/* 3. Menyartiklar */
 .menu-list {
   max-width: 800px;
   margin: 40px auto;
@@ -428,14 +415,12 @@ footer a.map-btn {
   padding: 0 20px;
 }
 
-/* --- 3. Finjustering av rätterna --- */
-
 .menu-item {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 20px;
   margin-bottom: 20px;
   display: flex;
-  flex-direction: column; /* Säkrar att ingredienserna hamnar under rubrik/pris */
+  flex-direction: column;
 }
 
 .item-header {
@@ -443,20 +428,20 @@ footer a.map-btn {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  margin-bottom: 8px; /* Ger lite luft ner till ingredienserna */
-  gap: 15px; /* MAGIN: Tvingar alltid in ett avstånd mellan rubrik och pris så de aldrig krockar */
+  margin-bottom: 8px;
+  gap: 15px;
 }
 
 .item-header h3 {
   margin: 0;
-  font-size: 30px; /* Minskad för mobil (var 50px) */
+  font-size: 30px;
   line-height: 1;
 }
 
 .price {
-  font-size: 22px; /* Minskad för mobil (var 30px) */
+  font-size: 22px;
   font-weight: 600;
-  white-space: nowrap; /* Tvingar priset att förbli på en rad, t.ex. "139:-" */
+  white-space: nowrap;
 }
 
 .ingredients {
@@ -467,7 +452,7 @@ footer a.map-btn {
   line-height: 1.4;
 }
 
-/* --- 4. Allergi-informationen i botten --- */
+/* 4. Allergiinformation */
 .allergy-info {
   font-size: 16px;
   text-align: center;
@@ -481,31 +466,34 @@ footer a.map-btn {
   color: #ffffff;
   font-weight: bold;
   text-align: center;
- padding: 30px 20px;
+  padding: 30px 20px;
   margin: 40px 0 0 0;
   width: 100%;
   border-radius: 0px;
   font-size: 18px;
 }
-/* =========================================
-   EVENT-SIDAN / FORMULÄR 
-========================================= */
 
-/* Hero-bilden högst upp */
+/* =========================================
+   EVENTSIDA & FORMULÄR
+   ========================================= */
+
+/* Hero-bild */
 .event-hero img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
-/* Huvudbehållaren för innehållet */
+/* Huvudbehållare */
 .event-container {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-/* Anpassa pizzabilden */
 .info-image {
   width: 100%;
   height: auto;
@@ -513,11 +501,13 @@ footer a.map-btn {
   display: none;
 }
 
+/* Informationssektion */
 .event-info {
-  margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
-/* Texten & Rubriken til vänster */
 .event-info h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 45px;
@@ -530,8 +520,15 @@ footer a.map-btn {
   margin-bottom: 10px;
 }
 
+/* Formulär */
+.event-form-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
 .form-group {
-  margin-bottom: 20px; /* Ökade till 20px så det blir lite mer luft mellan fälten */
+  margin-bottom: 20px;
 }
 
 .form-group label {
@@ -550,22 +547,25 @@ footer a.map-btn {
   font-family: inherit;
 }
 
+/* Inaktiverar storleksändring av textfält */
 #message {
   min-height: 120px;
-  resize: none; /* Detta gör att besökaren inte kan dra ut rutan alls, precis som du ville! */
+  resize: none;
 }
 
+/* Submit-knapp */
 .submit-btn {
+  display: block;
+  margin: 30px auto 0 auto;
   background-color: #d97736;
   color: #ffffff;
   border: none;
-  padding: 15px 30px; /* Bytte till shorthand: 15px uppe/nere, 30px höger/vänster för en snyggare rektangel */
+  padding: 15px 30px;
   border-radius: 15px;
   font-family: "Bebas Neue", sans-serif;
   font-size: 30px;
   cursor: pointer;
   transition: 0.5s;
-
 }
 
 .submit-btn:hover {
@@ -579,45 +579,11 @@ footer a.map-btn {
   margin-top: 5px;
 }
 
-/* --- EVENT-SIDAN  --- */
-.event-container {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;    
-  max-width: 800px;       
-  margin: 0 auto;         
-  padding: 40px 20px;
-}
-
-.event-info {
-  text-align: center; 
-  margin-bottom: 40px;
-  width: 100%;
-}
-
-.event-form-wrapper {
-  width: 100%;
-  max-width: 600px; 
-}
-
-/* Centrerar knappen */
-.submit-btn {
-  display: block;
-  margin: 30px auto 0 auto; /* auto på sidorna gör att den hamnar i mitten */
-}
-
-/* Ger mer luft mellan formuläret och footern */
-.event-form-wrapper {
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 30px; /* Öka denna siffra om du vill ha ÄNNU mer vitt utrymme */
-}
-
 /* =========================================
-   STORA SKÄRMAR (DESKTOP)
+   MEDIA QUERIES (Desktop)
    ========================================= */
 @media (min-width: 768px) {
-  /* Header */
+  /* Sidhuvud */
   header {
     flex-wrap: nowrap;
     padding: 25px 40px;
@@ -626,21 +592,13 @@ footer a.map-btn {
     z-index: 100;
   }
 
-  .contact-info {
-    width: auto;
-    order: unset;
-    margin-top: 0;
-    padding-top: 0;
-    border-top: none;
-    /* ...behåll de befintliga reglerna du redan har här för desktop... */
-  }
-
+  /* Logotyp */
   .logo img {
     width: auto;
     height: 80px;
   }
 
-  /* Meny (Visa horisontellt) */
+  /* Visning av navigering */
   .hamburger {
     display: none;
   }
@@ -659,17 +617,23 @@ footer a.map-btn {
     padding: 0;
   }
 
-  /* Kontaktinfo i header */
+  /* Kontaktinformation (Sidhuvud) */
   .contact-info {
     display: block;
-    text-align: right;
+    width: auto;
+    order: unset;
+    margin-top: 0;
+    padding-top: 0;
     padding-bottom: 0px;
+    border-top: none;
+    text-align: right;
     line-height: 1.5;
     font-size: 19px;
     color: #f5f5f5;
+    position: static;
+    transform: none;
   }
 
-  /* Gör klickytan för numret rätt storlek och överst */
   .contact-info a {
     color: inherit;
     text-decoration: none;
@@ -678,40 +642,26 @@ footer a.map-btn {
     z-index: 10;
   }
 
-  .contact-info {
-    display: block;
-    text-align: right;
-    
-    /* ÅTERSTÄLLER  POSITIONERING FÖR DATOR */
-    position: static; 
-    transform: none;
-    
-    padding-bottom: 0px;
-    line-height: 1.5;
-    font-size: 19px;
-    color: #f5f5f5;
-  }
-
-  /* Footer: Fyra spalter på Desktop */
+  /* Sidfot: Kolumnlayout */
   .footer-content {
     display: flex;
-flex-direction: row;
-justify-content: space-between;
-max-width: 1200px;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: left; /* Flyttar texten till vänster på stora skärmar */
+    text-align: left;
   }
 
   .social-icons {
     justify-content: flex-start;
   }
 
-  /* Startsidan: Lägg knapparna på en horisontell rad på desktop */
+  /* Startsida: Horisontell layout för knappar */
   .hero-content {
     flex-direction: row;
   }
 
-  /* Grid för att lägga text och bild exakt sida vid sida (50/50) */
+  /* Grid-layout för text och bild */
   .info-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -720,7 +670,7 @@ max-width: 1200px;
     margin-bottom: 80px;
   }
 
-  /* Meny-delen */
+  /* Menysida: Justeringar för desktop */
   .page-title {
     margin-left: 180px;
   }
@@ -729,10 +679,6 @@ max-width: 1200px;
     justify-content: center;
     overflow-x: visible;
     padding: 0;
-  }
-
-  .ingredients {
-    max-width: 50%;
   }
 
   .scroll-arrow {
@@ -751,3 +697,4 @@ max-width: 1200px;
     font-size: 18px;
     max-width: 50%;
   }
+}

@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Downlake Grill & Bar - Meny</title>
+
+    <!-- Externa teckensnitt -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Stilmallar -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -17,18 +21,23 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- HEADER START -->
+    <!-- Sidhuvud -->
     <header>
+      <!-- Logotyp -->
       <div class="logo">
         <a href="index.html">
           <img src="images/Logo.svg" alt="Downlake Grill & Bar Logotyp" />
         </a>
       </div>
+
+      <!-- Menyknapp (Mobilvy) -->
       <button class="hamburger" aria-label="Öppna meny">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
+
+      <!-- Huvudnavigering -->
       <nav class="nav-menu">
         <ul>
           <li><a href="index.html">START</a></li>
@@ -39,6 +48,8 @@
           <li><a href="index.html#hitta-hit">KONTAKT</a></li>
         </ul>
       </nav>
+
+      <!-- Kontaktinformation i sidhuvud -->
       <div class="contact-info">
         <p>
           <strong>ÖPPET IDAG:</strong> <span id="todays-hours">Laddar...</span>
@@ -46,10 +57,10 @@
         <p><strong>TEL:</strong> <a href="tel:0691750011">0691 75 00 11</a></p>
       </div>
     </header>
-    <!-- HEADER SLUT -->
 
-    <!-- HUVUDINNEHÅLL START -->
+    <!-- Huvudinnehåll -->
     <main>
+      <!-- Sektion: Meny-navigering -->
       <div class="menu-header-wrapper">
         <h1 class="page-title">VÅR MENY</h1>
         <div class="menu-nav-container">
@@ -65,25 +76,30 @@
         </div>
       </div>
 
+      <!-- Visuell avdelare -->
       <div class="menu-divider"></div>
 
-      <!-- Meny-innehåll renderas här av JavaScript -->
+      <!-- Sektion: Meny-innehåll (Populeras via JavaScript) -->
       <div id="menu-container"></div>
 
-      <!-- Viktig information (Allergier etc) -->
+      <!-- Sektion: Allergiinformation och serveringstillstånd -->
       <div class="info-box-orange">
         <p>ALLERGIER? FRÅGA OSS GÄRNA OM INNEHÅLLET I MATEN.</p>
         <p>VI HAR FULLSTÄNDIGA RÄTTIGHETER (ÖL & VIN).</p>
       </div>
     </main>
-    <!-- HUVUDINNEHÅLL SLUT -->
 
-    <!-- FOOTER START -->
+    <!-- Sidfot -->
     <footer id="hitta-hit">
       <div class="footer-content">
+        <!-- Sektion: Platsinformation och karta -->
         <div class="footer-col">
           <h3>HITTA HIT</h3>
-          <p>Downlake Grill & Bar<br />Kvarnsvedsvägen 24,<br />864 96 Stöde</p>
+          <p>
+            Downlake Grill & Bar<br />
+            Kvarnsvedsvägen 24,<br />
+            864 96 Stöde
+          </p>
           <a
             href="https://www.google.com/maps/place/Kvarnsvedsv%C3%A4gen+24,+864+96+St%C3%B6de"
             target="_blank"
@@ -91,14 +107,20 @@
             >Öppna i Google Maps</a
           >
         </div>
+
+        <!-- Sektion: Öppettider -->
         <div class="footer-col">
           <h3>ÖPPETTIDER</h3>
           <p>Mån–Fre: 11–20<br />Lör–Sön: 12–20</p>
         </div>
+
+        <!-- Sektion: Telefon -->
         <div class="footer-col">
           <h3>TELEFONNUMMER</h3>
           <a href="tel:0691750011">0691 75 00 11</a>
         </div>
+
+        <!-- Sektion: Sociala medier -->
         <div class="footer-col">
           <h3>FÖLJ OSS!</h3>
           <div class="social-icons">
@@ -106,20 +128,22 @@
               href="https://www.facebook.com/people/Nedansj%C3%B6-Grillen/61580404156965/"
               target="_blank"
               aria-label="Facebook"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
             <a
               href="https://www.instagram.com/nedansjo.grillen"
               target="_blank"
               aria-label="Instagram"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
           </div>
         </div>
       </div>
     </footer>
-    <!-- FOOTER SLUT -->
 
+    <!-- Skriptfiler -->
     <script src="js/main.js"></script>
   </body>
 </html>
