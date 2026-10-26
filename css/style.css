@@ -112,6 +112,15 @@ header {
   text-decoration: none;
 }
 
+/* Fixar flimmret i öppettiderna */
+.contact-info #todays-hours {
+  display: inline-block;
+  width: 3.2em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-family: "Montserrat", sans-serif;
+}
+
 #om-oss p {
   font-size: 17px;
 }
