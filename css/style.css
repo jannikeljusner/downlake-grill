@@ -37,6 +37,7 @@ header {
   padding: 15px 20px;
   background-color: #1a1a1a;
   width: 100%;
+  position: relative;
 }
 
 /* Logotyp */
@@ -68,14 +69,39 @@ header {
   border-radius: 2px;
 }
 
-/* Göm menylänkarna och kontaktinfon på mobilen */
+/* Göm menylänkarna */
 .nav-menu {
   display: none;
 }
 
-.contact-info {
-  display: none;
+.nav-menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  text-align: center;
+  z-index: 1000;
 }
+
+.contact-info {
+  display: block;
+  position: absolute;
+  left: 50%;
+  translateX(-50%);
+  text-align: center;
+  font-size: 14px;
+  color: #f5f5f5;
+  margin-top: 10px;
+  width: max-content;
+}
+.contact-info a {
+  color: #ffffff; 
+  text-decoration: none; /* Tar bort understrykningen */
+}
+
 
 #om-oss p {
   font-size: 17px; /* Sänk denna siffra tills den känns normal igen */
@@ -253,7 +279,8 @@ footer a.map-btn {
 /* Större rubrik och brödtext */
 
 .about-text {
-  max-width: 85%;
+  max-width: 100%;
+  text-align: center;
 }
 
 .about-text h2 {
@@ -338,10 +365,11 @@ footer a.map-btn {
 
 /* Utseende på pilarna */
 .scroll-arrow {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
-  padding: 0 10px;
+  padding: 0 15px;
   cursor: pointer;
+  color: #d97736;
 }
 
 /* --- Avdelare under knapparna --- */
@@ -356,8 +384,8 @@ footer a.map-btn {
 /* --- 2. Maträtterna --- */
 .menu-category {
   text-align: center;
-  font-size: 65px;
-  margin-bottom: 80px;
+  font-size: 45px;
+  margin-bottom: 40px;
   scroll-margin-top: 150px;
 }
 
@@ -398,28 +426,37 @@ footer a.map-btn {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Säkrar att ingredienserna hamnar under rubrik/pris */
 }
 
 .item-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 8px; /* Ger lite luft ner till ingredienserna */
+  gap: 15px; /* MAGIN: Tvingar alltid in ett avstånd mellan rubrik och pris så de aldrig krockar */
 }
 
 .item-header h3 {
   margin: 0;
-  font-size: 50px;
+  font-size: 30px; /* Minskad för mobil (var 50px) */
+  line-height: 1;
 }
 
 .price {
-  font-size: 30px;
+  font-size: 22px; /* Minskad för mobil (var 30px) */
   font-weight: 600;
+  white-space: nowrap; /* Tvingar priset att förbli på en rad, t.ex. "139:-" */
 }
 
 .ingredients {
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
-  max-width: 100%; /* Tar hela bredden på mobilen */
+  width: 100%;
+  max-width: 70%;
+  line-height: 1.4;
 }
 
 /* --- 4. Allergi-informationen i botten --- */
@@ -430,6 +467,18 @@ footer a.map-btn {
   margin-bottom: 25px;
 }
 
+.info-box-orange {
+  display: block;
+  background-color: #d97736;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+ padding: 30px 20px;
+  margin: 40px 0 0 0;
+  width: 100%;
+  border-radius: 0px;
+  font-size: 18px;
+}
 /* =========================================
    EVENT-SIDAN / FORMULÄR 
 ========================================= */
@@ -522,6 +571,40 @@ footer a.map-btn {
   margin-top: 5px;
 }
 
+/* --- EVENT-SIDAN  --- */
+.event-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  max-width: 800px;       
+  margin: 0 auto;         
+  padding: 40px 20px;
+}
+
+.event-info {
+  text-align: center; 
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.event-form-wrapper {
+  width: 100%;
+  max-width: 600px; 
+}
+
+/* Centrerar knappen */
+.submit-btn {
+  display: block;
+  margin: 30px auto 0 auto; /* auto på sidorna gör att den hamnar i mitten */
+}
+
+/* Ger mer luft mellan formuläret och footern */
+.event-form-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px; /* Öka denna siffra om du vill ha ÄNNU mer vitt utrymme */
+}
+
 /* =========================================
    STORA SKÄRMAR (DESKTOP)
    ========================================= */
@@ -577,12 +660,26 @@ footer a.map-btn {
     z-index: 10;
   }
 
+  .contact-info {
+    display: block;
+    text-align: right;
+    
+    /* ÅTERSTÄLLER  POSITIONERING FÖR DATOR */
+    position: static; 
+    transform: none;
+    
+    padding-bottom: 0px;
+    line-height: 1.5;
+    font-size: 19px;
+    color: #f5f5f5;
+  }
+
   /* Footer: Fyra spalter på Desktop */
   .footer-content {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 40px;
-    max-width: 1400px;
+    display: flex;
+flex-direction: row;
+justify-content: space-between;
+max-width: 1200px;
     margin: 0 auto;
     text-align: left; /* Flyttar texten till vänster på stora skärmar */
   }
@@ -624,36 +721,15 @@ footer a.map-btn {
     display: none;
   }
 
-/* --- EVENT-SIDAN  --- */
-.event-container {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;    
-  max-width: 800px;       
-  margin: 0 auto;         
-  padding: 40px 20px;
-}
+  .item-header h3 {
+    font-size: 50px;
+  }
 
-.event-info {
-  text-align: center; 
-  margin-bottom: 40px;
-  width: 100%;
-}
+  .price {
+    font-size: 30px;
+  }
 
-.event-form-wrapper {
-  width: 100%;
-  max-width: 600px; 
-}
-
-/* Centrerar knappen */
-.submit-btn {
-  display: block;
-  margin: 30px auto 0 auto; /* auto på sidorna gör att den hamnar i mitten */
-}
-
-/* Ger mer luft mellan formuläret och footern */
-.event-form-wrapper {
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 30px; /* Öka denna siffra om du vill ha ÄNNU mer vitt utrymme */
-}
+  .ingredients {
+    font-size: 18px;
+    max-width: 50%;
+  }
