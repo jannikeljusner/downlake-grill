@@ -57,20 +57,23 @@
     <main>
 
       <!-- Rubrik och menyknappar -->
-<h1 class="page-title">VÅR MENY</h1>
+<!-- Rubrik och menyknappar i en gemensam låda -->
+<div class="menu-header-wrapper">
+  <h1 class="page-title">VÅR MENY</h1>
 
-<div class="menu-nav-container">
-  <span class="scroll-arrow">&lt;</span>
-  
-  <nav class="menu-nav">
-    <button class="active">BURGARE</button>
-    <button>PIZZA</button>
-    <button>TALLRIKAR & RULLAR</button>
-    <button>SIDES & DIPP</button>
-    <button>DRYCK & GLASS</button>
-  </nav>
+  <div class="menu-nav-container">
+    <span class="scroll-arrow">&lt;</span>
+    
+    <nav class="menu-nav">
+      <button class="active">BURGARE</button>
+      <button>PIZZA</button>
+      <button>TALLRIKAR & RULLAR</button>
+      <button>SIDES & DIPP</button>
+      <button>DRYCK & GLASS</button>
+    </nav>
 
-  <span class="scroll-arrow">&gt;</span>
+    <span class="scroll-arrow">&gt;</span>
+  </div>
 </div>
 
 <!-- Lång grå linje under knapparna -->
@@ -78,53 +81,7 @@
 
 <!-- Meny-innehåll -->
 <div id="menu-container">
-  
-  <!-- En menykategori (t.ex. Burgare) -->
-  <section class="menu-category" id="burgare">
-    <h2>BURGARE</h2>
-    <div class="orange-line"></div>
-    <p class="category-info">
-      PRIS INKL. POMMES OCH DRYCK OCH ENKEL KÖTT<br>
-      EXTRA KÖTT 35 KR
-    </p>
-
-    <!-- Lista med rätter -->
-    <div class="menu-list">
-      
-      <!-- En enskild rätt -->
-      <article class="menu-item">
-        <div class="item-header">
-          <h3>CLASSIC MÅL</h3>
-          <span class="price">139:-</span>
-        </div>
-        <p class="ingredients">
-          Kött, Cheddarost, Isbergssallad, Tomat, Picklad Gurka, Lök & Hamburgerdressing
-        </p>
-      </article>
-
-      <article class="menu-item">
-        <div class="item-header">
-          <h3>CLASSIC MÅL</h3>
-          <span class="price">139:-</span>
-        </div>
-        <p class="ingredients">
-          Kött, Cheddarost, Isbergssallad, Tomat, Picklad Gurka, Lök & Hamburgerdressing
-        </p>
-      </article>
-
-      <article class="menu-item">
-        <div class="item-header">
-          <h3>CLASSIC MÅL</h3>
-          <span class="price">139:-</span>
-        </div>
-        <p class="ingredients">
-          Kött, Cheddarost, Isbergssallad, Tomat, Picklad Gurka, Lök & Hamburgerdressing
-        </p>
-      </article>
-
-      <!-- Fler <article> för nästa burgare (Tennessee, Truffel Delux osv) hamnar här -->
-
-    </div>
+ </div>
   </section>
 
 </div>
@@ -200,5 +157,6 @@
       </div>
     </footer>
     <!-- FOOTER SLUT -->
+     <script src="js/main.js"></script>
   </body>
 </html>

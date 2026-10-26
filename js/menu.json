@@ -1,0 +1,275 @@
+[
+  {
+    "id": 1,
+    "kategori": "BURGARE",
+    "namn": "Classic",
+    "beskrivning": "Kött, cheddarost, isbergssallad, tomat, picklad gurka, lök och hamburgerdressing.",
+    "pris": 139
+  },
+  {
+    "id": 2,
+    "kategori": "BURGARE",
+    "namn": "Tennessee",
+    "beskrivning": "Kött, pepper jack & cheddarost, picklad jalapeño, karamelliserad lök, röd chili och Tennessee BBQ-dressing.",
+    "pris": 149
+  },
+  {
+    "id": 3,
+    "kategori": "BURGARE",
+    "namn": "Truffel Delux",
+    "beskrivning": "Kött, dubbelost, rostad lök, honey glaze och vår goda tryffeldressing.",
+    "pris": 149
+  },
+  {
+    "id": 4,
+    "kategori": "BURGARE",
+    "namn": "Triple Cheese",
+    "beskrivning": "Kött, tre lager cheddarost, picklad gurka, hyvlad silverlök, ketchup och senap.",
+    "pris": 139
+  },
+  {
+    "id": 5,
+    "kategori": "BURGARE",
+    "namn": "Down Lake",
+    "beskrivning": "Kött, cheddarost, krispsallad, tomat, picklad rödlök, lökringar och chipotlemajo.",
+    "pris": 139
+  },
+  {
+    "id": 6,
+    "kategori": "BURGARE",
+    "namn": "Chicken Supreme",
+    "beskrivning": "Friterad kyckling, k-coleslaw, picklad gurka, honey glaze, toppad med sesamfrön.",
+    "pris": 149
+  },
+  {
+    "id": 7,
+    "kategori": "BURGARE",
+    "namn": "Chicken Strip Burger",
+    "beskrivning": "Friterad kyckling innerfilé, krispsallad, tomat, mangoraya.",
+    "pris": 149
+  },
+  {
+    "id": 8,
+    "kategori": "BURGARE",
+    "namn": "Bacon Supreme",
+    "beskrivning": "Kött, cheddarost, bacon, silverlök, karamelliserad lök, picklad jalapeño.",
+    "pris": 149
+  },
+  {
+    "id": 9,
+    "kategori": "BURGARE",
+    "namn": "Kids Burger",
+    "beskrivning": "Kött, cheddarost och ketchup.",
+    "pris": 100
+  },
+  {
+    "id": 10,
+    "kategori": "BURGARE",
+    "namn": "Halloumi",
+    "beskrivning": "Halloumi-steak, krispsallad, picklad rödlök, tomat, picklad jalapeño och chilimajo.",
+    "pris": 129
+  },
+  {
+    "id": 11,
+    "kategori": "BURGARE",
+    "namn": "Veg for you",
+    "beskrivning": "Växtbaserad burgare, krispsallad, tomat, karamelliserad lök, lökringar och tryffeldressing.",
+    "pris": 129
+  },
+  {
+    "id": 12,
+    "kategori": "PIZZA",
+    "namn": "Margherita",
+    "beskrivning": "Tomatsås, mozzarella, basilika.",
+    "pris": 120
+  },
+  {
+    "id": 13,
+    "kategori": "PIZZA",
+    "namn": "Funghi",
+    "beskrivning": "Tomatsås, mozzarella, champinjoner.",
+    "pris": 120
+  },
+  {
+    "id": 14,
+    "kategori": "PIZZA",
+    "namn": "Vesuvio",
+    "beskrivning": "Tomatsås, mozzarella, skinka.",
+    "pris": 125
+  },
+  {
+    "id": 15,
+    "kategori": "PIZZA",
+    "namn": "Capricciosa",
+    "beskrivning": "Tomatsås, mozzarella, skinka, champinjoner.",
+    "pris": 125
+  },
+  {
+    "id": 16,
+    "kategori": "PIZZA",
+    "namn": "Hawaii",
+    "beskrivning": "Tomatsås, mozzarella, skinka, ananas.",
+    "pris": 125
+  },
+  {
+    "id": 17,
+    "kategori": "PIZZA",
+    "namn": "Kebabpizza",
+    "beskrivning": "Tomatsås, mozzarella, kebabkött, feferoni.",
+    "pris": 140
+  },
+  {
+    "id": 18,
+    "kategori": "PIZZA",
+    "namn": "Kycklingpizza",
+    "beskrivning": "Tomatsås, mozzarella, kyckling, banan, curry.",
+    "pris": 140
+  },
+  {
+    "id": 19,
+    "kategori": "PIZZA",
+    "namn": "Spicy Salami",
+    "beskrivning": "Tomatsås, mozzarella, stark salami, färsk vitlök.",
+    "pris": 140
+  },
+  {
+    "id": 20,
+    "kategori": "PIZZA",
+    "namn": "Pepperoni",
+    "beskrivning": "Tomatsås, mozzarella, pepperoni, färsk vitlök.",
+    "pris": 140
+  },
+  {
+    "id": 21,
+    "kategori": "PIZZA",
+    "namn": "Oxfilépizza",
+    "beskrivning": "Tomatsås, mozzarella, oxfilé, ruccola, bearnaisesås.",
+    "pris": 149
+  },
+  {
+    "id": 22,
+    "kategori": "PIZZA",
+    "namn": "Vegetale",
+    "beskrivning": "Tomatsås, mozzarella, champinjoner, paprika, lök, oliver.",
+    "pris": 140
+  },
+  {
+    "id": 23,
+    "kategori": "TALLRIKAR & RULLAR",
+    "namn": "Kebabtallrik",
+    "beskrivning": "Mixsallad, kebab, pommes, vitlöksås.",
+    "pris": 125
+  },
+  {
+    "id": 24,
+    "kategori": "TALLRIKAR & RULLAR",
+    "namn": "Kycklingtallrik",
+    "beskrivning": "Mixsallad, kyckling, pommes, vitlöksås.",
+    "pris": 125
+  },
+  {
+    "id": 25,
+    "kategori": "TALLRIKAR & RULLAR",
+    "namn": "Fish and Chips",
+    "beskrivning": "Fish and chips, citron, remouladsås.",
+    "pris": 139
+  },
+  {
+    "id": 26,
+    "kategori": "TALLRIKAR & RULLAR",
+    "namn": "Lövbiff med pommes",
+    "beskrivning": "Mixsallad, lövbiff, pommes, persiljesmör.",
+    "pris": 139
+  },
+  {
+    "id": 27,
+    "kategori": "TALLRIKAR & RULLAR",
+    "namn": "Kebabrulle",
+    "beskrivning": "Mixsallad, kebab, vitlöksås.",
+    "pris": 125
+  },
+  {
+    "id": 28,
+    "kategori": "TALLRIKAR & RULLAR",
+    "namn": "Kycklingrulle",
+    "beskrivning": "Mixsallad, kyckling, vitlöksås.",
+    "pris": 125
+  },
+  {
+    "id": 29,
+    "kategori": "SIDES & DIPP",
+    "namn": "Pommes",
+    "beskrivning": "",
+    "pris": 30
+  },
+  {
+    "id": 30,
+    "kategori": "SIDES & DIPP",
+    "namn": "Melted cheese fries",
+    "beskrivning": "Pommes, ostsås, picklad jalapeño, rödlök och chilimajo.",
+    "pris": 55
+  },
+  {
+    "id": 31,
+    "kategori": "SIDES & DIPP",
+    "namn": "Chili Cheese",
+    "beskrivning": "6 st.",
+    "pris": 35
+  },
+  {
+    "id": 32,
+    "kategori": "SIDES & DIPP",
+    "namn": "Lökringar",
+    "beskrivning": "6 st.",
+    "pris": 35
+  },
+  {
+    "id": 33,
+    "kategori": "SIDES & DIPP",
+    "namn": "Chicken Nuggets",
+    "beskrivning": "6 st inkl. pommes + 33cl läsk.",
+    "pris": 90
+  },
+  {
+    "id": 34,
+    "kategori": "SIDES & DIPP",
+    "namn": "Dippsåser",
+    "beskrivning": "Välj mellan: Ostsås, Cheddar, Tryffelmajo, Chilimajo, Tennessee BBQ, Chicago Stripsdipp, Chipotlemajo, Bearnaisesås, Vitlökssås, Sriracha, Manchester.",
+    "pris": 15
+  },
+  {
+    "id": 35,
+    "kategori": "DRYCK & GLASS",
+    "namn": "Läsk 33 cl",
+    "beskrivning": "",
+    "pris": 20
+  },
+  {
+    "id": 36,
+    "kategori": "DRYCK & GLASS",
+    "namn": "Läsk 50 cl",
+    "beskrivning": "",
+    "pris": 30
+  },
+  {
+    "id": 37,
+    "kategori": "DRYCK & GLASS",
+    "namn": "Lättöl",
+    "beskrivning": "",
+    "pris": 35
+  },
+  {
+    "id": 38,
+    "kategori": "DRYCK & GLASS",
+    "namn": "Festis",
+    "beskrivning": "",
+    "pris": 15
+  },
+  {
+    "id": 39,
+    "kategori": "DRYCK & GLASS",
+    "namn": "Mjukglass",
+    "beskrivning": "Endast vid säsong! (Milkshake är på väg!)",
+    "pris": 0
+  }
+]

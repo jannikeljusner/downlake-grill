@@ -77,6 +77,10 @@ header {
   display: none;
 }
 
+#om-oss p {
+  font-size: 17px; /* Sänk denna siffra tills den känns normal igen */
+}
+
 /* =========================================
    MENYLÄNKAR (Utseende)
    ========================================= */
@@ -353,6 +357,8 @@ footer a.map-btn {
 .menu-category {
   text-align: center;
   font-size: 65px;
+  margin-bottom: 80px;
+  scroll-margin-top: 150px;
 }
 
 .category-info {
@@ -501,6 +507,12 @@ footer a.map-btn {
   font-family: "Bebas Neue", sans-serif;
   font-size: 30px;
   cursor: pointer;
+  transition: 0.5s;
+
+}
+
+.submit-btn:hover {
+  background-color: #1c1c1c;
 }
 
 .error-text {
@@ -595,7 +607,7 @@ footer a.map-btn {
 
   /* Meny-delen */
   .page-title {
-    margin-left: 400px;
+    margin-left: 180px;
   }
 
   .menu-nav {
@@ -612,18 +624,36 @@ footer a.map-btn {
     display: none;
   }
 
-/* Event-delen */
-
-.info-image {
-  display: block;
-}
-
+/* --- EVENT-SIDAN  --- */
 .event-container {
   display: flex;
-  gap: 100px;
+  flex-direction: column; 
+  align-items: center;    
+  max-width: 800px;       
+  margin: 0 auto;         
+  padding: 40px 20px;
 }
 
-.event-info,
+.event-info {
+  text-align: center; 
+  margin-bottom: 40px;
+  width: 100%;
+}
+
 .event-form-wrapper {
-  flex: 1;
+  width: 100%;
+  max-width: 600px; 
+}
+
+/* Centrerar knappen */
+.submit-btn {
+  display: block;
+  margin: 30px auto 0 auto; /* auto på sidorna gör att den hamnar i mitten */
+}
+
+/* Ger mer luft mellan formuläret och footern */
+.event-form-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px; /* Öka denna siffra om du vill ha ÄNNU mer vitt utrymme */
 }
