@@ -503,6 +503,13 @@ footer a.map-btn {
   cursor: pointer;
 }
 
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 5px;
+}
+
 /* =========================================
    STORA SKÄRMAR (DESKTOP)
    ========================================= */
