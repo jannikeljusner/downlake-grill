@@ -13,19 +13,17 @@ if (hamburger) {
 }
 
 // --- 2. ÖPPETTIDER BASERAT PÅ VECKODAG ---
-const timeDisplay = document.getElementById("todays-hours");
+let now = new Date();
+let dayToday = now.getDay();
+let timeDisplay = document.getElementById("todays-hours");
 
 // Kolla så att texten för öppettider finns på sidan innan den ändras
 if (timeDisplay !== null) {
-  // Kolla vilken veckodag det är
-  const dayToday = new Date().getDay();
-
-  // Bestäm öppettider baserat på veckodag
-  const openingHours = dayToday === 0 || dayToday === 6 ? "12-20" : "11-20";
-
-  // Uppdatera bara texten om den behöver ändras
-  if (timeDisplay.textContent.trim() !== openingHours) {
-    timeDisplay.textContent = openingHours;
+  // Sätt helgtider om det är söndag (0) eller lördag (6)
+  if (dayToday === 0 || dayToday === 6) {
+    timeDisplay.textContent = "12-20";
+  } else {
+    timeDisplay.textContent = "11-20";
   }
 }
 
@@ -117,6 +115,8 @@ if (menuContainer !== null) {
         let categoryItems = menuData.filter(function (item) {
           return item.kategori === categoryName;
         });
+        // Visar informationsrutan först när menyinläsningen är klar.
+        document.body.classList.add("menu-loaded");
 
         // Om kategorin har maträtter, bygg ihop dem
         if (categoryItems.length > 0) {
@@ -178,6 +178,8 @@ if (menuContainer !== null) {
       console.log("Kunde inte hämta menyn: ", error);
       menuContainer.innerHTML =
         "<p>Kunde inte ladda menyn just nu. Försök ladda om sidan.</p>";
+      // Visar informationsrutan först när menyinläsningen är klar.
+      document.body.classList.add("menu-loaded");
     });
 }
 

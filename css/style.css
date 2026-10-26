@@ -707,3 +707,7 @@ footer a.map-btn {
     max-width: 50%;
   }
 }
+/* Döljer den orange informationsrutan tills menyn har laddats klart. */
+body:has(#menu-container):not(.menu-loaded) .info-box-orange {
+  visibility: hidden;
+}
