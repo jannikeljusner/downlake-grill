@@ -661,8 +661,17 @@ footer a.map-btn {
     text-align: left;
   }
 
-  .social-icons {
-    justify-content: flex-start;
+  .footer-col .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  #phone-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrerar rubrik och länk i sidled */
+    text-align: center;
   }
 
   /* Startsida: Horisontell layout för knappar */
