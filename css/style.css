@@ -300,9 +300,9 @@ footer a.map-btn {
   text-align: center;
 }
 
-.about-text h2 {
+.about-text h1 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 50px;
+  font-size: 45px;
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
@@ -661,16 +661,26 @@ footer a.map-btn {
     text-align: left;
   }
 
+  .about-text h1 {
+    text-align: left;
+  }
+
+  .about-text p {
+    text-align: left;
+  }
+
+  /* Sidfot: Centrera ikoner under rubrik */
   .footer-col .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
   }
 
+  /* Sidfot: Centrera telnr under rubrik */
   #phone-section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrerar rubrik och länk i sidled */
+    align-items: center;
     text-align: center;
   }
 
