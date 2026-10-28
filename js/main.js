@@ -20,6 +20,13 @@ if (timeDisplay !== null) {
   let now = new Date();
   let dayToday = now.getDay();
 
+  // Kör de vanliga veckodagstiderna direkt (med riktigt tankstreck "–") för att undvika lagg
+  if (dayToday === 0 || dayToday === 6) {
+    timeDisplay.textContent = "12–20";
+  } else {
+    timeDisplay.textContent = "11–20";
+  }
+
   // Formaterar aktuellt datum till formatet ÅÅÅÅ-MM-DD
   // (JavaScript börjar räkna månader från 0, därför plussas 1 på)
   let year = now.getFullYear();
@@ -35,24 +42,12 @@ if (timeDisplay !== null) {
     .then(function (holidayData) {
       // Kontrollerar om dagens datum finns i listan
       if (holidayData[todayString]) {
-        // Om datumet finns med: Skrivs texten för den avvikande dagen ut
+        // Om datumet finns med: Skrivs texten för den avvikande dagen ut (och ersätter den vanliga)
         timeDisplay.textContent = holidayData[todayString];
-      } else {
-        // Om datumet INTE finns: Kör de vanliga veckodagstiderna
-        if (dayToday === 0 || dayToday === 6) {
-          timeDisplay.textContent = "12-20";
-        } else {
-          timeDisplay.textContent = "11-20";
-        }
       }
     })
     .catch(function (error) {
-      // Om filen inte kunde laddas (t.ex. nätverksfel), visa vanliga tider
-      if (dayToday === 0 || dayToday === 6) {
-        timeDisplay.textContent = "12-20";
-      } else {
-        timeDisplay.textContent = "11-20";
-      }
+      // Felhantering: Skulle nätverket krångla görs ingenting
     });
 }
 
