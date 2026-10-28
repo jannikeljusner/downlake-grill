@@ -259,7 +259,7 @@ footer a.map-btn {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 52vh;
+  min-height: 55vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -414,7 +414,7 @@ footer a.map-btn {
 /* 2. Kategorisektioner */
 .menu-category {
   text-align: center;
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 40px;
   scroll-margin-top: 150px;
 }
@@ -736,21 +736,25 @@ footer a.map-btn {
     font-size: 45px; /* Skalar upp till originalstorleken på stora skärmar */
   }
 
+  .item-header h3 {
+    font-size: 50px;
+  }
 
-.item-header h3 {
-  font-size: 50px;
-}
+  .price {
+    font-size: 30px;
+  }
 
-.price {
-  font-size: 30px;
-}
+  .ingredients {
+    font-size: 18px;
+    max-width: 50%;
+  }
 
-.ingredients {
-  font-size: 18px;
-  max-width: 50%;
-}
+  /* Döljer den orange informationsrutan tills menyn har laddats klart. */
+  body:has(#menu-container):not(.menu-loaded) .info-box-orange {
+    visibility: hidden;
+  }
 
-/* Döljer den orange informationsrutan tills menyn har laddats klart. */
-body:has(#menu-container):not(.menu-loaded) .info-box-orange {
-  visibility: hidden;
+  .mobile-br {
+    display: none;
+  }
 }
