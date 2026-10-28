@@ -259,7 +259,7 @@ footer a.map-btn {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 70vh;
+  min-height: 52vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -414,7 +414,7 @@ footer a.map-btn {
 /* 2. Kategorisektioner */
 .menu-category {
   text-align: center;
-  font-size: 45px;
+  font-size: 28px;
   margin-bottom: 40px;
   scroll-margin-top: 150px;
 }
@@ -542,6 +542,10 @@ footer a.map-btn {
   font-size: 18px;
   line-height: 1.4;
   margin-bottom: 10px;
+}
+
+.mobile-br {
+  display: block;
 }
 
 /* Formulär */
@@ -728,19 +732,24 @@ footer a.map-btn {
     display: none;
   }
 
-  .item-header h3 {
-    font-size: 50px;
+  .menu-category {
+    font-size: 45px; /* Skalar upp till originalstorleken på stora skärmar */
   }
 
-  .price {
-    font-size: 30px;
-  }
 
-  .ingredients {
-    font-size: 18px;
-    max-width: 50%;
-  }
+.item-header h3 {
+  font-size: 50px;
 }
+
+.price {
+  font-size: 30px;
+}
+
+.ingredients {
+  font-size: 18px;
+  max-width: 50%;
+}
+
 /* Döljer den orange informationsrutan tills menyn har laddats klart. */
 body:has(#menu-container):not(.menu-loaded) .info-box-orange {
   visibility: hidden;
