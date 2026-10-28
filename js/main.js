@@ -135,7 +135,7 @@ if (form !== null) {
       isValid = false;
     }
 
-    // 5. Validera Antal personer (Eftersom type="number" kollar vi att det är mer än 0)
+    // 5. Validera Antal personer (Eftersom type="number" kollar att det är mer än 0)
     if (peopleVal === "" || peopleVal <= 0) {
       peopleError.textContent = "Du måste ange ett giltigt antal personer.";
       isValid = false;
