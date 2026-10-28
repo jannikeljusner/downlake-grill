@@ -256,3 +256,7 @@ if (menuNavElement !== null && scrollArrows.length === 2) {
     });
   });
 }
+// --- 7. FOOTER ---
+// Lägger automatiskt till korrekt år för copyright-delen
+
+document.getElementById("year").textContent = new Date().getFullYear();
