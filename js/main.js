@@ -12,19 +12,48 @@ if (hamburger) {
   });
 }
 
-// --- 2. ÖPPETTIDER BASERAT PÅ VECKODAG ---
-let now = new Date();
-let dayToday = now.getDay();
+// --- 2. ÖPPETTIDER BASERAT PÅ VECKODAG OCH AVVIKANDE DATUM ---
 let timeDisplay = document.getElementById("todays-hours");
 
-// Kolla så att texten för öppettider finns på sidan innan den ändras
+// Kontrollerar att elementet existerar innan koden körs
 if (timeDisplay !== null) {
-  // Sätt helgtider om det är söndag (0) eller lördag (6)
-  if (dayToday === 0 || dayToday === 6) {
-    timeDisplay.textContent = "12-20";
-  } else {
-    timeDisplay.textContent = "11-20";
-  }
+  let now = new Date();
+  let dayToday = now.getDay();
+
+  // Formaterar aktuellt datum till formatet ÅÅÅÅ-MM-DD
+  // (JavaScript börjar räkna månader från 0, därför plussas 1 på)
+  let year = now.getFullYear();
+  let month = String(now.getMonth() + 1).padStart(2, "0"); // (Padstart ser till att det blir 2 siffror ex. 1 jan, 01-01)
+  let date = String(now.getDate()).padStart(2, "0");
+  let todayString = year + "-" + month + "-" + date;
+
+  // Hämtar listan med avvikande öppettider
+  fetch("js/tider.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (holidayData) {
+      // Kontrollerar om dagens datum finns i listan
+      if (holidayData[todayString]) {
+        // Om datumet finns med: Skrivs texten för den avvikande dagen ut
+        timeDisplay.textContent = holidayData[todayString];
+      } else {
+        // Om datumet INTE finns: Kör de vanliga veckodagstiderna
+        if (dayToday === 0 || dayToday === 6) {
+          timeDisplay.textContent = "12-20";
+        } else {
+          timeDisplay.textContent = "11-20";
+        }
+      }
+    })
+    .catch(function (error) {
+      // Om filen inte kunde laddas (t.ex. nätverksfel), visa vanliga tider
+      if (dayToday === 0 || dayToday === 6) {
+        timeDisplay.textContent = "12-20";
+      } else {
+        timeDisplay.textContent = "11-20";
+      }
+    });
 }
 
 // --- 3. FORMULÄR FÖR EVENTFÖRFRÅGAN ---
