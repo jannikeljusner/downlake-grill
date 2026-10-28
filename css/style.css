@@ -234,6 +234,21 @@ footer a.map-btn {
   color: #999999;
 }
 
+/* Copyright-sektionen i footern */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* En väldigt svag, snygg linje */
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: #a0a0a0; /* En lite diskretare grå färg */
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
 /* =========================================
    SEKTION: HERO & KNAPPAR (Startsida)
    ========================================= */
