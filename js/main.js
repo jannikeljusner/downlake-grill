@@ -82,27 +82,67 @@ if (form !== null) {
     messageError.textContent = "";
 
     // Kolla om något fält saknar text
-    if (nameInput.value.trim() === "") {
+    // Hämta värdena (trim tar bort onödiga mellanslag)
+    const nameVal = nameInput.value.trim();
+    const emailVal = emailInput.value.trim();
+    const phoneVal = phoneInput.value.trim();
+    const dateVal = dateInput.value.trim();
+    const peopleVal = peopleInput.value.trim();
+    const messageVal = messageInput.value.trim();
+
+    // Sätt upp reglerna (Regex)
+    const nameRegex = /^[a-zA-ZåäöÅÄÖ\s\-]+$/; // Bara bokstäver, mellanslag och bindestreck
+    const phoneRegex = /^[0-9+\-\s]+$/; // Bara siffror, plus, bindestreck och mellanslag
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Måste innehålla något + @ + något + punkt + något
+    const dateRegex = /^[0-9\-\:\s]+$/; // Siffror, bindestreck, kolon och mellanslag
+
+    // 1. Validera Namn
+    if (nameVal === "") {
       nameError.textContent = "Du måste ange ett namn.";
       isValid = false;
+    } else if (!nameRegex.test(nameVal)) {
+      nameError.textContent =
+        "Namnet får inte innehålla siffror eller ogiltiga tecken.";
+      isValid = false;
     }
-    if (emailInput.value.trim() === "") {
+
+    // 2. Validera E-post
+    if (emailVal === "") {
       emailError.textContent = "Du måste ange en e-postadress.";
       isValid = false;
+    } else if (!emailRegex.test(emailVal)) {
+      emailError.textContent =
+        "Ange en giltig e-postadress (måste innehålla @).";
+      isValid = false;
     }
-    if (phoneInput.value.trim() === "") {
+
+    // 3. Validera Telefonnummer
+    if (phoneVal === "") {
       phoneError.textContent = "Du måste ange ett telefonnummer.";
       isValid = false;
+    } else if (!phoneRegex.test(phoneVal)) {
+      phoneError.textContent = "Telefonnumret får endast innehålla siffror.";
+      isValid = false;
     }
-    if (dateInput.value.trim() === "") {
+
+    // 4. Validera Datum & Tid
+    if (dateVal === "") {
       dateError.textContent = "Du måste välja datum och tid.";
       isValid = false;
-    }
-    if (peopleInput.value.trim() === "") {
-      peopleError.textContent = "Du måste ange antal personer.";
+    } else if (!dateRegex.test(dateVal)) {
+      dateError.textContent =
+        "Använd endast siffror, bindestreck och kolon (t.ex. 2026-11-05 18:00).";
       isValid = false;
     }
-    if (messageInput.value.trim() === "") {
+
+    // 5. Validera Antal personer (Eftersom type="number" kollar vi att det är mer än 0)
+    if (peopleVal === "" || peopleVal <= 0) {
+      peopleError.textContent = "Du måste ange ett giltigt antal personer.";
+      isValid = false;
+    }
+
+    // 6. Validera Meddelande (Ingen regex behövs här, all text är okej)
+    if (messageVal === "") {
       messageError.textContent = "Du måste skriva en förfrågan.";
       isValid = false;
     }
